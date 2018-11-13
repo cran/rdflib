@@ -3,7 +3,9 @@ options(rdf_print_format = "nquads")
 
 ## ----message = FALSE, warning=FALSE--------------------------------------
 library(rdflib)
-library(tidyverse)
+library(dplyr)
+library(tidyr)
+library(tibble)
 library(jsonld)
 
 ## ------------------------------------------------------------------------
@@ -146,11 +148,10 @@ rdf <- as_rdf.list(R, context)
 rdf  
 
 ## ------------------------------------------------------------------------
-source(system.file("examples/as_rdf.R", package="rdflib"))
+#source(system.file("examples/as_rdf.R", package="rdflib"))
 source(system.file("examples/tidy_schema.R", package="rdflib"))
 
 ## Testing: Digest some data.frames into RDF and extract back
- library(tidyverse)
  cars <- mtcars %>% rownames_to_column("Model")
  x1 <- as_rdf(iris, NULL, "iris:")
  x2 <- as_rdf(cars, NULL, "mtcars:")
@@ -176,7 +177,4 @@ DT::datatable(iris2)
 sparql <- tidy_schema("Species",  "Sepal.Length", "Sepal.Width", prefix = "iris")
 
 rdf_query(rdf, sparql)
-
-## ------------------------------------------------------------------------
-options("rdf_print_format" =  "jsonld")
 

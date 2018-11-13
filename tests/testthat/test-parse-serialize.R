@@ -21,6 +21,7 @@ testthat::test_that("we can parse (in rdfxml)
                       roundtrip <- rdf_parse(out, "nquads")
                       testthat::expect_is(roundtrip, "rdf")
                       
+                      rdf_free(roundtrip)
                       rdf_free(rdf)
                       })
 
@@ -49,6 +50,7 @@ testthat::test_that("we can parse and serialize json-ld", {
   rdf_serialize(rdf, "out.jsonld")
   unlink("out.json")
   unlink("out.jsonld")
+  rdf_free(roundtrip)
   rdf_free(rdf)
   
 })
@@ -59,6 +61,7 @@ testthat::test_that("we can parse and serialize nquads", {
   roundtrip <- rdf_parse("out.nquads")
   testthat::expect_is(roundtrip, "rdf")
   unlink("nquads")
+  rdf_free(roundtrip)
   rdf_free(rdf)
   
 })
@@ -70,8 +73,9 @@ testthat::test_that("we can parse and serialize ntriples", {
   unlink("out.nt")
   rdf_serialize(rdf, "out.ntriples")
   unlink("out.ntriples")
+
+  rdf_free(roundtrip)
   rdf_free(rdf)
-  
 })
 testthat::test_that("we can parse and serialize tutle", {
   rdf <- rdf_parse(doc)
@@ -82,6 +86,7 @@ testthat::test_that("we can parse and serialize tutle", {
   rdf_serialize(rdf, "out.turtle")
   unlink("out.turtle")
   
+  rdf_free(roundtrip)
   rdf_free(rdf)
 })
 testthat::test_that("we can parse and serialize rdfxml", {
@@ -93,6 +98,8 @@ testthat::test_that("we can parse and serialize rdfxml", {
   unlink("out.rdf")
   rdf_serialize(rdf, "out.xml")
   unlink("out.xml")
+  
+  rdf_free(roundtrip)
   rdf_free(rdf)
 })
 
@@ -150,18 +157,18 @@ testthat::test_that("we can serialize turtle with a baseUri", {
       "@id": "person_id",
       "schema:name": "Jane Doe"
     }'
-    options(rdflib_base_uri = "http://example.com/")
+    options(rdf_base_uri = "http://example.com/")
     rdf <- rdf_parse(ex, "jsonld")
     testthat::expect_output(cat(format(rdf, "nquads")), "http://example.com")
     rdf_free(rdf)
     
     
-    options(rdflib_base_uri = "")
+    options(rdf_base_uri = "")
     rdf <- rdf_parse(ex, "jsonld")
-    testthat::expect_silent(cat(format(rdf, "nquads")))
+    testthat::expect_length(rdf, 0)
     rdf_free(rdf)
     
-    options(rdflib_base_uri = NULL)
+    options(rdf_base_uri = NULL)
   })
   
   
@@ -195,8 +202,10 @@ testthat::test_that("we can parse from a url", {
 })
 
 testthat::test_that("we can parse from a text string", {
+  
+  
   rdf <- rdf_parse(doc)
-  txt <- format(rdf, format = "rdfxml")
+  txt <- rdf_serialize(rdf, format = "rdfxml")
   testthat::expect_is(txt, "character")
   roundtrip <- rdf_parse(txt, format="rdfxml")
   testthat::expect_is(roundtrip, "rdf")

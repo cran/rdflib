@@ -1,10 +1,20 @@
 Package: rdflib
 Title: Tools to Manipulate and Query Semantic Data
-Version: 0.1.0
-Authors@R: person("Carl", "Boettiger", 
+Version: 0.2.0
+Authors@R: c(person("Carl", "Boettiger", 
                   email = "cboettig@gmail.com", 
                   role = c("aut", "cre", "cph"),
-                  comment=c(ORCID = "0000-0002-1642-628X"))
+                  comment=c(ORCID = "0000-0002-1642-628X")),
+             person("Bryce", "Mecum", 
+                  role = "rev",
+                  comment=c(ORCID = "0000-0002-0381-3766")),
+             person("Anna", "Krystalli", 
+                  role = "rev",
+                  comment=c(ORCID = "0000-0002-2378-4915")),
+             person("Viktor", "Senderov",
+                  email = "vsenderov@gmail.com",
+                  role = "ctb",
+                  comment = c(ORCID = "0000-0003-3340-5963")))
 Description: The Resource Description Framework, or 'RDF' is a widely used
              data representation model that forms the cornerstone of the 
              Semantic Web. 'RDF' represents data as a graph rather than 
@@ -24,16 +34,20 @@ Encoding: UTF-8
 LazyData: true
 URL: https://github.com/ropensci/rdflib
 BugReports: https://github.com/ropensci/rdflib/issues
-Imports: redland, jsonld, methods, utils, stringi, readr
-RoxygenNote: 6.0.1
-Suggests: magrittr, covr, testthat, knitr, rmarkdown, jqr, DT,
-        tidyverse, dplyr, tidyr, tibble, purrr, lubridate, httr, xml2,
-        jsonlite, repurrrsive, nycflights13, codemetar
+Imports: redland, jsonld, methods, utils, stringi, readr, dplyr, tidyr
+RoxygenNote: 6.1.1
+Suggests: magrittr, covr, testthat, knitr, rmarkdown, jqr, DT, tibble,
+        purrr, lubridate, httr, xml2, jsonlite, repurrrsive,
+        nycflights13, spelling
 VignetteBuilder: knitr
+Language: en-US
 NeedsCompilation: no
-Packaged: 2018-03-08 21:40:42 UTC; cboettig
+Packaged: 2018-11-13 06:11:19 UTC; rstudio
 Author: Carl Boettiger [aut, cre, cph]
-    (<https://orcid.org/0000-0002-1642-628X>)
+    (<https://orcid.org/0000-0002-1642-628X>),
+  Bryce Mecum [rev] (<https://orcid.org/0000-0002-0381-3766>),
+  Anna Krystalli [rev] (<https://orcid.org/0000-0002-2378-4915>),
+  Viktor Senderov [ctb] (<https://orcid.org/0000-0003-3340-5963>)
 Maintainer: Carl Boettiger <cboettig@gmail.com>
 Repository: CRAN
-Date/Publication: 2018-03-09 12:56:58 UTC
+Date/Publication: 2018-11-13 06:30:03 UTC

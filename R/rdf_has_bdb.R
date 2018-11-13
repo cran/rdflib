@@ -11,21 +11,32 @@
 #' @examples 
 #' rdf_has_bdb()
 rdf_has_bdb <- function(){
-  ## Unfortunately convoluted way to check if we have Berkeley DB Support
-  world <- new("World")
-  path <-tempdir()
-  options <- paste0("new='yes',hash-type='bdb',dir='", path, "'")
-  storage <- new("Storage", world, "hashes", name = "rdflib", 
-                 options = options)
-  
-  out <- !(utils::capture.output(
-    base::print.default(
-      storage@librdf_storage@ref)) == 
-      "<pointer: 0x0>")
-  
-  redland::freeStorage(storage)
-  redland::freeWorld(world)
-  
-  out
+ rdf_storage("BDB", new_db = TRUE, check_only = TRUE)
 }
 
+rdf_has_virtuoso <- function(user="dba", 
+                             password="dba", 
+                             dsn="Local Virtuoso"){
+#  has_driver <- rdf_storage("virtuoso", 
+#                            user = user, 
+#                            password = password, 
+#                            dsn = dsn, 
+#                            check_only=TRUE)
+  r <- tryCatch(rdf("virtuoso", user = user, 
+           password = password, dsn = dsn, fallback = FALSE),
+           error = function(e) FALSE)
+  if(is.logical(r)){
+    has_connection <- r
+  } else {
+    rdf_add(r, "", "dc:name", "bob")
+    if(length(r) >= 1){
+      has_connection <- TRUE
+    } else { 
+      has_connection <- FALSE
+    }
+    rdf_free(r)
+  }
+
+  has_connection
+  
+}
