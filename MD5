@@ -1,7 +1,7 @@
-bf2bafacdf9b623696bfe7b89fbb55b0 *DESCRIPTION
+97d0e1996de06454f280556c6f5845c0 *DESCRIPTION
 0415cc42e49162c660c31e1c33153a9d *LICENSE
 0f85a74624ceaf2c4e6de8e8d2d96a27 *NAMESPACE
-46778d6a920c42875a9309df98dd3691 *NEWS.md
+5f1cc07ef9b26756bb1aa3b435f0ebec *NEWS.md
 dfd4e736d3b649425f694dc7d9973afd *R/as_rdf.R
 83af19fce69a10e559e17bbee7079bdb *R/rdf.R
 e4b06484d9506357f0e5de4543383191 *R/rdf_add.R
@@ -19,7 +19,7 @@ de3b4223b2b7fc4881f45d2fabea7620 *README.md
 f1fb9f5b330948c876b677b20e58b7cf *inst/WORDLIST
 b68e9f3f7efb74427c62e411d1abccb9 *inst/doc/rdf_intro.R
 e93de96461c11c40d29a68915a28c6ec *inst/doc/rdf_intro.Rmd
-65d19f1944415e6c12a7944322cd614b *inst/doc/rdf_intro.html
+45de9735130b3f715f4a1ac90c18dd4d *inst/doc/rdf_intro.html
 c8536ddd19618973507611116c4ae690 *inst/docker/Dockerfile
 b751ff115f93d5870b2ee1131b4f5f36 *inst/docker/cli/Dockerfile
 34e84b52745ae260fcea3a244df9ae8c *inst/docker/docker-compose.yml
@@ -28,6 +28,8 @@ bb5bebe99b44bf69e015d2c19ebf8365 *inst/examples/deprecated.R
 204ecdfa1a8cff262a40c0a9b2c8c678 *inst/examples/rdf-wo-redland.R
 07766050d3cfd8944b226cc786859ac5 *inst/examples/storage_types.R
 3bf7ab6909853b1e27bdc73de0ecd984 *inst/examples/tidy_schema.R
+b0136b1359acf8da9c9261618de18044 *inst/examples/virtuoso-direct.R
+b2420b06e60143c01b06e5c3da2ba0bd *inst/extdata/airlines.nq
 496c5d6335b3247e80853cfb56b346ab *inst/extdata/ex.xml
 deb16e9bbd6b39a0b2f2fbec045faa2e *inst/extdata/ex2.xml
 b67cee1c8b6fc7c92f856f7c04e71905 *inst/extdata/github.json
@@ -56,9 +58,11 @@ f4800a5d1f486712fdefcb12c0cf8dde *tests/testthat.R
 c15619ef679dbe7c3622164d11302fc3 *tests/testthat/test-parse-serialize.R
 2acfbffc2286cf06511b4fb205125fb3 *tests/testthat/test-rdf.R
 72684e5b6366f32d57cdb7d240f3d547 *tests/testthat/test-rdf_add.R
-c7a78ca11adda3d741a896f357b0be30 *tests/testthat/test-rdf_query.R
+2d4202a42a38d05ae4b463ea4172a8c7 *tests/testthat/test-rdf_query.R
 58ef1ebcc9aca4d939570211886e6211 *tests/testthat/test-rdf_storage.R
 af94a4d9821cc5009f5b13a382846bbb *tests/testthat/test-utilities.R
 d8e9eafff4ffed924cb25018f39b93d5 *vignettes/articles/data-lake.Rmd
+46836ff8decdfff83abd7695a02b3b50 *vignettes/articles/flights.nq
+03d110b2ab16329c1d81dcaae65a65de *vignettes/articles/rdflib.sqlite
 992d60de68975cf1cde1b0dfc0f04fcf *vignettes/articles/storage.Rmd
 e93de96461c11c40d29a68915a28c6ec *vignettes/rdf_intro.Rmd

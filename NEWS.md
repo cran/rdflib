@@ -1,4 +1,8 @@
-# rdflib 0.2.0 
+# rdflib 0.2.1
+
+* Minor patch to make test compatible with breaking change in readr 1.2.0 (#30)
+
+# rdflib 0.2.0 2018-11-13
 
 ## New Features
 

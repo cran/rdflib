@@ -1,6 +1,6 @@
 Package: rdflib
 Title: Tools to Manipulate and Query Semantic Data
-Version: 0.2.0
+Version: 0.2.1
 Authors@R: c(person("Carl", "Boettiger", 
                   email = "cboettig@gmail.com", 
                   role = c("aut", "cre", "cph"),
@@ -42,7 +42,7 @@ Suggests: magrittr, covr, testthat, knitr, rmarkdown, jqr, DT, tibble,
 VignetteBuilder: knitr
 Language: en-US
 NeedsCompilation: no
-Packaged: 2018-11-13 06:11:19 UTC; rstudio
+Packaged: 2018-11-25 04:43:13 UTC; cboettig
 Author: Carl Boettiger [aut, cre, cph]
     (<https://orcid.org/0000-0002-1642-628X>),
   Bryce Mecum [rev] (<https://orcid.org/0000-0002-0381-3766>),
@@ -50,4 +50,4 @@ Author: Carl Boettiger [aut, cre, cph]
   Viktor Senderov [ctb] (<https://orcid.org/0000-0003-3340-5963>)
 Maintainer: Carl Boettiger <cboettig@gmail.com>
 Repository: CRAN
-Date/Publication: 2018-11-13 06:30:03 UTC
+Date/Publication: 2018-11-25 05:20:03 UTC
