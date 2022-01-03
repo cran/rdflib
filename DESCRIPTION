@@ -1,6 +1,6 @@
 Package: rdflib
 Title: Tools to Manipulate and Query Semantic Data
-Version: 0.2.3
+Version: 0.2.4
 Authors@R: c(person("Carl", "Boettiger", 
                   email = "cboettig@gmail.com", 
                   role = c("aut", "cre", "cph"),
@@ -31,18 +31,17 @@ Description: The Resource Description Framework, or 'RDF' is a widely used
              interface takes inspiration from the Python 'rdflib' library.
 License: MIT + file LICENSE
 Encoding: UTF-8
-LazyData: true
 URL: https://github.com/ropensci/rdflib
 BugReports: https://github.com/ropensci/rdflib/issues
 Imports: redland, jsonld, methods, utils, stringi, readr, dplyr, tidyr
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.2
 Suggests: magrittr, covr, testthat, knitr, rmarkdown, jqr, DT, tibble,
         purrr, lubridate, httr, xml2, jsonlite, repurrrsive,
         nycflights13, spelling
 VignetteBuilder: knitr
 Language: en-US
 NeedsCompilation: no
-Packaged: 2020-01-08 19:54:52 UTC; cboettig
+Packaged: 2022-01-03 19:14:45 UTC; cboettig
 Author: Carl Boettiger [aut, cre, cph]
     (<https://orcid.org/0000-0002-1642-628X>),
   Bryce Mecum [rev] (<https://orcid.org/0000-0002-0381-3766>),
@@ -50,4 +49,4 @@ Author: Carl Boettiger [aut, cre, cph]
   Viktor Senderov [ctb] (<https://orcid.org/0000-0003-3340-5963>)
 Maintainer: Carl Boettiger <cboettig@gmail.com>
 Repository: CRAN
-Date/Publication: 2020-01-10 04:10:02 UTC
+Date/Publication: 2022-01-03 19:40:02 UTC

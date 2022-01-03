@@ -1,4 +1,8 @@
-# rdflib 0.2.3 2019-01-15
+# rdflib 0.2.4
+
+* bugfix in write_nquads() for rdf method
+
+# rdflib 0.2.3 2020-01-10
 
 * Drop import of deprecated redland method, getNextResult (#33)
 
@@ -27,7 +31,7 @@
 ## New Features
 
 * `rdf()` supports BDB backend for disk-based storage for large
-   triplestores [#6](https://github.com/cboettig/rdflib/issues/6)
+   triplestores [#6](https://github.com/ropensci/rdflib/issues/6)
 * `rdf_parse()` gains an argument `rdf` to append triples to existing graph
 * adds `c()` method to concatenate `rdf` objects
 * Performance improvements make it possible to handle triplestores with millions of triples
@@ -46,8 +50,8 @@
    will automatically declare the appropriate `datatype_uri`
    if the user has not manually specified this. 
 * Numerous improvements to documentation from rOpenSci onboarding feedback, see 
-  [#9](https://github.com/cboettig/rdflib/issues/9) and 
-  [#10](https://github.com/cboettig/rdflib/issues/10) 
+  [#9](https://github.com/ropensci/rdflib/issues/9) and 
+  [#10](https://github.com/ropensci/rdflib/issues/10) 
 * both functions and unit tests are broken out into separate files in
   their respective directories.
 * Additional example RDF data added in `extdata`
@@ -80,7 +84,7 @@
 
 * add paper.md
 * add package level documentation
-* set base uri when serializing json-ld to rdf ([#5](https://github.com/cboettig/rdflib/issues/5))
+* set base uri when serializing json-ld to rdf ([#5](https://github.com/ropensci/rdflib/issues/5))
 
 
 # rdflib 0.0.2 (2018-01-02)

@@ -1,5 +1,7 @@
 ## ----include=FALSE------------------------------------------------------------
 options(rdf_print_format = "nquads")
+is_linux <- Sys.info()["sysname"] == "Linux"
+knitr::opts_chunk$set(eval=is_linux)
 
 ## ----message = FALSE, warning=FALSE-------------------------------------------
 library(rdflib)
@@ -38,7 +40,7 @@ DT::datatable(iris_triples)
 ## -----------------------------------------------------------------------------
 iris_triples <- iris %>%
   rowid_to_column("subject") %>%
-  mutate(subject = paste0("http://example.com/iris#", subject)) %>%
+  mutate(subject = paste0("http://example.com/", "iris#", subject)) %>%
   gather(key = predicate, value = object, -subject)
 
 
@@ -48,9 +50,9 @@ DT::datatable(iris_triples)
 ## ----mesage = FALSE-----------------------------------------------------------
 iris_triples <- iris %>%
   rowid_to_column("subject") %>%
-  mutate(subject = paste0("http://example.com/iris#", subject)) %>%
+  mutate(subject = paste0("http://example.com/", "iris#", subject)) %>%
   gather(key = predicate, value = object, -subject) %>%
-  mutate(predicate = paste0("http://example.com/iris#", predicate))
+  mutate(predicate = paste0("http://example.com/", "iris#", predicate))
 
 
 ## ----echo=FALSE---------------------------------------------------------------
@@ -60,7 +62,7 @@ DT::datatable(iris_triples)
 rdf <- rdf()
 
 ## -----------------------------------------------------------------------------
-base <- "http://example.com/iris#"
+base <- paste0("http://example.com/", "iris#")
 
 rdf %>% 
   rdf_add(subject = paste0(base, "obs1"), 
@@ -112,15 +114,15 @@ rdf <- rdf_parse(ex, "jsonld")
 rdf
 
 ## -----------------------------------------------------------------------------
-jsonld_flatten(ex, context = "http://schema.org")
+jsonld_flatten(ex, context = "https://schema.org/")
 
 ## -----------------------------------------------------------------------------
 jsonld_flatten(ex) %>%
-  jsonld_frame('{"@type": "http://schema.org/Person"}') %>%
-  jsonld_compact(context = "http://schema.org")
+  jsonld_frame('{"@type": "https://schema.org//Person"}') %>%
+  jsonld_compact(context = "https://schema.org/")
 
 ## -----------------------------------------------------------------------------
-as_rdf.list <- function(x, context = "http://schema.org"){
+as_rdf.list <- function(x, context = "https://schema.org/"){
   if(length(x) == 1) x <- x[[1]]
   x[["@context"]] <- context
   json <- jsonlite::toJSON(x, pretty = TRUE, auto_unbox = TRUE, force = TRUE)
@@ -128,8 +130,8 @@ as_rdf.list <- function(x, context = "http://schema.org"){
 }
 
 ## -----------------------------------------------------------------------------
-context <- list("http://schema.org", 
-                list(schema = "http://schema.org/",
+context <- list("https://schema.org/", 
+                list(schema = "https://schema.org//",
                      given = "givenName",
                      family = "familyName",
                      title = "name",
@@ -177,4 +179,8 @@ DT::datatable(iris2)
 sparql <- tidy_schema("Species",  "Sepal.Length", "Sepal.Width", prefix = "iris")
 
 rdf_query(rdf, sparql)
+
+## ----include=FALSE------------------------------------------------------------
+unlink("rdf.nq")
+unlink("example.json")
 
