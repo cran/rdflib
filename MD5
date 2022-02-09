@@ -1,7 +1,7 @@
-f29062fb0283548e84a187aa9e10e2d8 *DESCRIPTION
+4695c9f5d88937eaca6d444ec1c97f75 *DESCRIPTION
 d5b975067a2b415889d591b9f027cc1e *LICENSE
 0e2de5243b1f8888a0a7a42b380881dd *NAMESPACE
-efd34524b89d5d9fb813fa502c821179 *NEWS.md
+2c537f9bc6f6002809a6a4bd0d1d47a3 *NEWS.md
 dfd4e736d3b649425f694dc7d9973afd *R/as_rdf.R
 83af19fce69a10e559e17bbee7079bdb *R/rdf.R
 e4b06484d9506357f0e5de4543383191 *R/rdf_add.R
@@ -19,7 +19,7 @@ f06b8dd90cf381dd5123a7316c23b2bd *README.md
 f1fb9f5b330948c876b677b20e58b7cf *inst/WORDLIST
 2248a5a77939bbd989696bc20c5b23be *inst/doc/rdf_intro.R
 c305e5d08a63fc3a7dd2b83c7f410b90 *inst/doc/rdf_intro.Rmd
-ec0b826c9aeba55c54303be4c8afaef9 *inst/doc/rdf_intro.html
+f165ffb458a64ab6ea542b45491fb6fb *inst/doc/rdf_intro.html
 c8536ddd19618973507611116c4ae690 *inst/docker/Dockerfile
 b751ff115f93d5870b2ee1131b4f5f36 *inst/docker/cli/Dockerfile
 34e84b52745ae260fcea3a244df9ae8c *inst/docker/docker-compose.yml
@@ -53,7 +53,7 @@ f4800a5d1f486712fdefcb12c0cf8dde *tests/testthat.R
 058026afb140a7f0b9dd3ee0a1e76d7f *tests/testthat/test-as_rdf.R
 c15619ef679dbe7c3622164d11302fc3 *tests/testthat/test-parse-serialize.R
 2acfbffc2286cf06511b4fb205125fb3 *tests/testthat/test-rdf.R
-72684e5b6366f32d57cdb7d240f3d547 *tests/testthat/test-rdf_add.R
+1ac1d3a2bcf608d3318bfc43659fdc07 *tests/testthat/test-rdf_add.R
 2d4202a42a38d05ae4b463ea4172a8c7 *tests/testthat/test-rdf_query.R
 58ef1ebcc9aca4d939570211886e6211 *tests/testthat/test-rdf_storage.R
 af94a4d9821cc5009f5b13a382846bbb *tests/testthat/test-utilities.R
