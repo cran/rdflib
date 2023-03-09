@@ -1,6 +1,6 @@
 Package: rdflib
 Title: Tools to Manipulate and Query Semantic Data
-Version: 0.2.5
+Version: 0.2.6
 Authors@R: c(person("Carl", "Boettiger", 
                   email = "cboettig@gmail.com", 
                   role = c("aut", "cre", "cph"),
@@ -34,14 +34,14 @@ Encoding: UTF-8
 URL: https://github.com/ropensci/rdflib
 BugReports: https://github.com/ropensci/rdflib/issues
 Imports: redland, jsonld, methods, utils, stringi, readr, dplyr, tidyr
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.3
 Suggests: magrittr, covr, testthat, knitr, rmarkdown, jqr, DT, tibble,
         purrr, lubridate, httr, xml2, jsonlite, repurrrsive,
         nycflights13, spelling
 VignetteBuilder: knitr
 Language: en-US
 NeedsCompilation: no
-Packaged: 2022-02-09 06:01:43 UTC; cboettig
+Packaged: 2023-03-09 19:43:49 UTC; cboettig
 Author: Carl Boettiger [aut, cre, cph]
     (<https://orcid.org/0000-0002-1642-628X>),
   Bryce Mecum [rev] (<https://orcid.org/0000-0002-0381-3766>),
@@ -49,4 +49,4 @@ Author: Carl Boettiger [aut, cre, cph]
   Viktor Senderov [ctb] (<https://orcid.org/0000-0003-3340-5963>)
 Maintainer: Carl Boettiger <cboettig@gmail.com>
 Repository: CRAN
-Date/Publication: 2022-02-09 06:30:02 UTC
+Date/Publication: 2023-03-09 21:50:06 UTC
