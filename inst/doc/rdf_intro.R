@@ -138,7 +138,7 @@ context <- list("https://schema.org/",
                      year = "datePublished",
                      note = "softwareVersion",
                      comment = "identifier",
-                     role = "http://www.loc.gov/marc/relators/relaterm.html"))
+                     role = "https://www.loc.gov/marc/relators/relaterm.html"))
 
 
 ## -----------------------------------------------------------------------------
