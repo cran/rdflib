@@ -1,7 +1,7 @@
-1364a1c50e873a56c4fc552441dc7b60 *DESCRIPTION
+1481ef5c35a052909c992261a112efe2 *DESCRIPTION
 d5b975067a2b415889d591b9f027cc1e *LICENSE
 5cbcdcf61de589c1608e9131b131f9fb *NAMESPACE
-d7b5df7d47821dfa66e814b102326804 *NEWS.md
+f396c122da8f56eb895eeaf3413f2c29 *NEWS.md
 dfd4e736d3b649425f694dc7d9973afd *R/as_rdf.R
 83af19fce69a10e559e17bbee7079bdb *R/rdf.R
 e4b06484d9506357f0e5de4543383191 *R/rdf_add.R
@@ -14,12 +14,12 @@ ac13bd3298a8e33ab0c263672504b3e0 *R/rdf_serialize.R
 daea18e31eadb6003f00c79bb0aafe56 *R/utilities.R
 49dd9c54c029033730c8b1a8fd5d6c89 *R/write_nquads.R
 8bcec9b8d862b175b6cf566bed549600 *README.md
-afd7073f861b6f48948648a9c9c37f64 *build/vignette.rds
+d9b6cb48091de7b4bd026f6ebe361b4d *build/vignette.rds
 db327c55ad31c4162e8ac181c7b8f459 *inst/CITATION
 5d95782c06b594b9be1cfbdb1c74a804 *inst/WORDLIST
-d051ca0de8d6e08cb2b9cbda6ee2fcd3 *inst/doc/rdf_intro.R
-2aea5f991806041bb4f6786e92c82881 *inst/doc/rdf_intro.Rmd
-1fdeb7703b6ec68a9cd49d6383a32b0d *inst/doc/rdf_intro.html
+cbf6bb5f5a50358183505e2861672ab5 *inst/doc/rdf_intro.R
+984271e170acb137dbd4d98122f6912d *inst/doc/rdf_intro.Rmd
+d00a3e5f048f434e6ff46efdba38ea2d *inst/doc/rdf_intro.html
 c8536ddd19618973507611116c4ae690 *inst/docker/Dockerfile
 b751ff115f93d5870b2ee1131b4f5f36 *inst/docker/cli/Dockerfile
 34e84b52745ae260fcea3a244df9ae8c *inst/docker/docker-compose.yml
@@ -61,4 +61,4 @@ a369081cf993ad7e7647b784b1380d38 *vignettes/articles/data-lake.Rmd
 d8e9eafff4ffed924cb25018f39b93d5 *vignettes/articles/data-lake.Rmd.orig
 fbcdc957e9106f74318c2bfcd77e1483 *vignettes/articles/storage.Rmd
 992d60de68975cf1cde1b0dfc0f04fcf *vignettes/articles/storage.Rmd.orig
-2aea5f991806041bb4f6786e92c82881 *vignettes/rdf_intro.Rmd
+984271e170acb137dbd4d98122f6912d *vignettes/rdf_intro.Rmd
